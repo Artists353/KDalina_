@@ -1,0 +1,46 @@
+{% extends 'main/basic_file.html' %}
+{% load static %}
+{%block title%}
+Главная страница!
+{%endblock%}
+{%block content%}
+
+<link rel="stylesheet" href="{%static 'main/css/main.css' %}">
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm" style="color: red">
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm" style="color: red">
+        <h2 class="center" style="color: #DC143C">Добро пожаловать в Кулинарный дом Алина</h2>
+    </div>
+</div>
+
+<div class="slideshow-container">
+    <img class="mySlides" src="{% static 'main/img/letnee-menu-2.png' %}" style="width:100%">
+    <img class="mySlides" src="{% static 'main/img/letnee-menu.png' %}" style="width:100%">
+    <script src="{%static 'main/js/script.js' %}"></script>
+</div>
+
+<head>
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm" style="color: red">
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm" style="color: red">
+        <h2 class="center" style="color: #DC143C">Каталог</h2>
+    </div>
+</div>
+</head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{static 'main/css/main.css'}">
+</head>
+<body>
+    <nav class="catalog-menu">
+        
+          <a class="highlight" href="{%url 'pie' %}" style="color: white">Пироги</a>
+          <a class="highlight" href="{%url 'cake' %}" style="color: white">Торты</a>
+          <a class="highlight" href="{%url 'brownie' %}" style="color: white">Пирожные</a>
+          <a class="highlight" href="{%url 'cookie' %}" style="color: white">Печенье</a>
+          <a class="highlight" href="{%url 'roll' %}" style="color: white">Рулет</a>
+          <a class="highlight" href="{%url 'other' %}" style="color: white">Прочее</a>
+        
+    </nav>
+</body>
+{%endblock%}

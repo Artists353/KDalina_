@@ -1,0 +1,222 @@
+{% extends 'main/basic_file.html' %}
+{% load static %}
+{%block title%}
+Главная страница
+{%endblock%}
+{%block content%}
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .product-grid {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .product-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            padding: 15px;
+            width: calc(33% - 40px);
+            max-width: 300px;
+            background-color: white;
+            border: 1px solid #ddd;
+        }
+
+        .product-image {
+            position: relative;
+            width: 100%;
+            height: auto;
+            max-width: 200px;
+            border-radius: 5px;
+        }
+
+        .new-label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 5px 10px;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            border-radius: 5px;
+            z-index: 1;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            max-width: 200px;
+            border-radius: 5px;
+        }
+
+        .product-card h3 {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .product-card p {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .product-card .price {
+            font-weight: bold;
+            color: #ff0000;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="product-grid">
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/пирожное_день_и_ночь.jpg'%}" alt="Product Image 1">
+            <div class="new-label">Новинки</div>
+            <h3>Пирожное день и ночь</h3>
+            <p>Бисквит классический и шоколадный, крем сливочно-заварной, какао.</p>
+            <span class="price">Цена: 207 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/пирожное_графские_развалины.jpg'%}" alt="Product Image 2">
+            <div class="new-label">Новинки</div>
+            <h3>Пирожное 'Графские развалины'</h3>
+            <p>Шоколадный бисквит, сметанный крем со сгущенным молоком.</p>
+            <span class="price">Цена: 324 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/пирожное_домашнее.jpg'%}" alt="Product Image 3">
+            <div class="new-label">Новинки</div>
+            <h3>Пирожное домашнее</h3>
+            <p>Бисквит классический и шоколадный, крем сливочно-сметанный, карамель с арахисом.</p>
+            <span class="price">Цена: 230 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/пирожное_забытый_вкус.jpg'%}" alt="Product Image 4">
+            <div class="new-label">Новинки</div>
+            <h3>Пирожное 'Забытый вкус'</h3>
+            <p>Бисквит классический и шоколадный, безе, джем малиновый или клубничный,  молочный шоколад, крем мороженое.</p>
+            <span class="price">Цена: 261 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/пирожное_калибри.jpg'%}" alt="Product Image 6">
+            <div class="new-label">Новинки</div>
+            <h3>Пирожное колибри</h3>
+            <p>Бисквит классический, сливочный крем с пюре манго и маракуйя, глазурь манго и маракуйя.</p>
+            <span class="price">Цена: 297 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/пирожное_каракум.jpg'%}" alt="Product Image 6">
+            <div class="new-label">Новинки</div>
+            <h3>Пирожное Каракум</h3>
+            <p>Песочное тесто , яблочный джем, суфле птичье молоко.</p>
+            <span class="price">Цена: 120 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/пирожное_карамелька.jpg'%}" alt="Product Image 6">
+            <div class="new-label">Новинки</div>
+            <h3>Пирожное карамелька</h3>
+            <p>Медовые коржи, сливочный крем с вареной сгущенкой, карамель.</p>
+            <span class="price">Цена: 171 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/пирожное_корзиночки.jpg'%}" alt="Product Image 6">
+            <div class="new-label">Новинки</div>
+            <h3>Пирожное корзиночка</h3>
+            <p>Песочное тесто, вишневый джем(может меняться), белковый крем.</p>
+            <span class="price">Цена: 45 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/пирожное_корзиночки_со_сгущенным_молоком_и_орехами.jpg'%}" alt="Product Image 6">
+            <div class="new-label">Новинки</div>
+            <h3>Пирожное корзиночки со сгущенным молоком и орехами</h3>
+            <p>Песочное тесто, вареное сгущенное молоко, орех грецкий, миндаль, арахис.</p>
+            <span class="price">Цена: 225 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/пирожное_корзиночки_с_творогом_и_яблоками.jpg'%}" alt="Product Image 6">
+            <div class="new-label">Новинки</div>
+            <h3>Пирожное корзиночки с творогом и яблоками</h3>
+            <p>Песочное тесто, яблоко, начинка творожная.</p>
+            <span class="price">Цена: 225 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/пирожное_макаруны.jpg'%}" alt="Product Image 6">
+            <div class="new-label">Новинки</div>
+            <h3>Пирожное макаруны</h3>
+            <p>Миндальное тесто, крем на основе сыра маскорпоне.</p>
+            <span class="price">Цена: 207 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/пирожное_малиновое.jpg'%}" alt="Product Image 6">
+            <div class="new-label">Новинки</div>
+            <h3>Пирожное малиновое</h3>
+            <p>Бисквит классический, крем мороженое, джем малиновый, малина.</p>
+            <span class="price">Цена: 83 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/торт_молочная_девочка.jpg'%}" alt="Product Image 6">
+            <div class="new-label">Новинки</div>
+            <h3>Пирожное молочная девочка</h3>
+            <p>Бисквит с белой сгущенкой, крем-чиз: маскарпоне со взбитыми сливками</p>
+            <span class="price">Цена: 81 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/пирожное_наполеон_заливной.jpg'%}" alt="Product Image 6">
+            <div class="new-label">Новинки</div>
+            <h3>Пирожное напалеон заливной</h3>
+            <p>Медово-шоколадные пышки, заварной крем, глазурь шоколадная</p>
+            <span class="price">Цена: 360 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/пирожное_нежное.jpg'%}" alt="Product Image 6">
+            <div class="new-label">Новинки</div>
+            <h3>Пирожное Нежное</h3>
+            <p>Медовые коржи, коржи из слоеного теста, крем сливочно-заварной, белый шоколад.</p>
+            <span class="price">Цена: 480 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/пирожное_птичье_молоко.jpg'%}" alt="Product Image 6">
+            <div class="new-label">Новинки</div>
+            <h3>Пирожное птичье молоко</h3>
+            <p>Бисквит шоколадный, суфле белковое, шоколад</p>
+            <span class="price">Цена: 68 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/пирожное_рыжик.jpg'%}" alt="Product Image 6">
+            <div class="new-label">Новинки</div>
+            <h3>Пирожное рыжик</h3>
+            <p>Медовые пышки, заварной крем</p>
+            <span class="price">Цена: 54 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/пирожное_эскимо.jpg'%}" alt="Product Image 6">
+            <div class="new-label">Новинки</div>
+            <h3>Пирожное эскимо</h3>
+            <p>Шоколадный бисквит, заварной крем, ганаш.</p>
+            <span class="price">Цена: 51 рублей</span>
+        </div>
+    </div>
+</body>
+</html>
+{%endblock%}

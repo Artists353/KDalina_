@@ -1,0 +1,36 @@
+{% extends 'main/basic_file.html' %}
+
+{%block title%}
+Отзовы пользователей
+{%endblock%}
+{%block content%}
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-red border-bottom shadow-sm">
+        <h1 style="color: #DC143C">Отзывы покупателей</h1>
+    </div>
+</div>
+{% for el in revie %}
+    <div class="alert alert-warning mt-2">
+        <h3>{{ el.title }}</h3>
+        <p>{{ el.review }}</p>
+    </div>
+{% endfor %}
+{% for review in reviews %}
+    <div style="margin-left: {{ review.parent|default:0|length }}0px;">
+        <strong>{{ review.title }}</strong>
+        <p>{{ review.content }}</p>
+
+        <form method="post" action="{% url 'add_review' %}">
+            {% csrf_token %}
+            <input type="hidden" name="parent" value="{{ review.id }}">
+            <input type="text" name="title" placeholder="Заголовок">
+            <textarea name="content" placeholder="Ваш ответ"></textarea>
+            <button type="submit">Ответить</button>
+        </form>
+
+        {% if review.replies.all %}
+            {% include "partials/review_list.html" with reviews=review.replies.all %}
+        {% endif %}
+    </div>
+{% endfor %}
+{%endblock%}

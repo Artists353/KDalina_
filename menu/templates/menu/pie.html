@@ -1,0 +1,110 @@
+{% extends 'main/basic_file.html' %}
+{% load static %}
+{%block title%}
+Главная страница
+{%endblock%}
+{%block content%}
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .product-grid {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .product-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            padding: 15px;
+            width: calc(33% - 40px);
+            max-width: 300px;
+            background-color: white;
+            border: 1px solid #ddd;
+        }
+
+        .product-image {
+            position: relative;
+            width: 100%;
+            height: auto;
+            max-width: 200px;
+            border-radius: 5px;
+        }
+
+        .new-label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 5px 10px;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            border-radius: 5px;
+            z-index: 1;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            max-width: 200px;
+            border-radius: 5px;
+        }
+
+        .product-card h3 {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .product-card p {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .product-card .price {
+            font-weight: bold;
+            color: #ff0000;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="product-grid">
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/пирог_зебра.jpg'%}" alt="Product Image 1">
+            <div class="new-label">Новинки</div>
+            <h3>Пирог Зебра</h3>
+            <p>Бисквит сметанно-масляный, Бисквит сметанно-масляный  с какао.</p>
+            <span class="price">Цена: 495 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/пирог_лесные_ягоды.jpg'%}" alt="Product Image 2">
+            <div class="new-label">Новинки</div>
+            <h3>Пирог лесные ягоды</h3>
+            <p>Фруктовое изобилие на песочном тесте.</p>
+            <span class="price">Цена: 504 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/пирог_песочный_с_цитрусом_и_вишней.jpg'%}" alt="Product Image 3">
+            <div class="new-label">Новинки</div>
+            <h3>Пирог песочный с цитросом и вишней</h3>
+            <p>Песочное тесто , лимон , желатин, масло сливочное, яичный белок, сахар.</p>
+            <span class="price">Цена: 225 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/пирог_песочный_с_цитрусом_и_творогом.jpg'%}" alt="Product Image 4">
+            <div class="new-label">Новинки</div>
+            <h3>Пирог песочный с творогом и цитрусом</h3>
+            <p>Песочное тесто , лимон , желатин, масло сливочное, яичный белок, сахар.</p>
+            <span class="price">Цена: 261 рублей</span>
+        </div>
+    </div>
+</body>
+</html>
+{%endblock%}

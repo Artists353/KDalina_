@@ -1,0 +1,103 @@
+{% extends 'main/basic_file.html' %}
+{%load static%}
+{%block title%}
+Главная страница
+{%endblock%}
+{%block content%}
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .product-grid {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .product-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            padding: 15px;
+            width: calc(33% - 40px);
+            max-width: 300px;
+            background-color: white;
+            border: 1px solid #ddd;
+        }
+
+        .product-image {
+            position: relative;
+            width: 100%;
+            height: auto;
+            max-width: 200px;
+            border-radius: 5px;
+        }
+
+        .new-label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 5px 10px;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            border-radius: 5px;
+            z-index: 1;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            max-width: 200px;
+            border-radius: 5px;
+        }
+
+        .product-card h3 {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .product-card p {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .product-card .price {
+            font-weight: bold;
+            color: #ff0000;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="product-grid">
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/печенье_курабье.jpg'%}" alt="Product Image 1">
+            <div class="new-label">Новинки</div>
+            <h3>Печенье курабье</h3>
+            <p>Тесто песочное, фруктовые джемы.</p>
+            <span class="price">Цена: 261 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/печенье_кокосовое.jpg'%}" alt="Product Image 2">
+            <div class="new-label">Новинки</div>
+            <h3>Печенье кокосовое</h3>
+            <p>Полудрожжевое тесто, кокос, сливочный крем</p>
+            <span class="price">Цена: 441 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/кольцо_песочное_с_грецким_орехом.jpg'%}" alt="Product Image 3">
+            <div class="new-label">Новинки</div>
+            <h3>Кольцо песочное с грецким орехом</h3>
+            <p>Песочное тесто, орех грецкий дробленный..</p>
+            <span class="price">Цена: 50 рублей</span>
+        </div>
+    </div>
+</body>
+</html>
+{%endblock%}

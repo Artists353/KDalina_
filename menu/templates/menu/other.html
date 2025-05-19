@@ -1,0 +1,118 @@
+{% extends 'main/basic_file.html' %}
+{% load static %}
+{%block title%}
+Главная страница
+{%endblock%}
+{%block content%}
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .product-grid {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .product-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            padding: 15px;
+            width: calc(33% - 40px);
+            max-width: 300px;
+            background-color: white;
+            border: 1px solid #ddd;
+        }
+
+        .product-image {
+            position: relative;
+            width: 100%;
+            height: auto;
+            max-width: 200px;
+            border-radius: 5px;
+        }
+
+        .new-label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 5px 10px;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            border-radius: 5px;
+            z-index: 1;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            max-width: 200px;
+            border-radius: 5px;
+        }
+
+        .product-card h3 {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .product-card p {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .product-card .price {
+            font-weight: bold;
+            color: #ff0000;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="product-grid">
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/безе_кольца.jpg'%}" alt="Product Image 1">
+            <div class="new-label">Новинки</div>
+            <h3>Безе кольца</h3>
+            <p>Безе</p>
+            <span class="price">Цена: 9 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/восточные_сладости_секреты_востока.jpg'%}" alt="Product Image 2">
+            <div class="new-label">Новинки</div>
+            <h3>Восточные сладости секреты востока</h3>
+            <p>Тесто сметанное, начинка из грецких орехов, меда, кураги, чернослива и изюма.</p>
+            <span class="price">Цена: 270 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/десерт_тирамису.jpg'%}" alt="Product Image 3">
+            <div class="new-label">Новинки</div>
+            <h3>Десерт тирамису</h3>
+            <p>Печенье Савоярди, крем-чиз, малина, какао.</p>
+            <span class="price">Цена: 126 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/пальчики_ореховые.jpg'%}" alt="Product Image 3">
+            <div class="new-label">Новинки</div>
+            <h3>Пальчики ореховые</h3>
+            <p>Тесто сметанное, начинка из грецких орехов и сахара..</p>
+            <span class="price">Цена: 270 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/кята_с_грецким_орехом.jpg'%}" alt="Product Image 3">
+            <div class="new-label">Новинки</div>
+            <h3>Кята с грецким орехом</h3>
+            <p>Сдобное тесто, грецкие орехи изелченные с сахаром.</p>
+            <span class="price">Цена: 180 рублей</span>
+        </div>
+    </div>
+</body>
+</html>
+{%endblock%}

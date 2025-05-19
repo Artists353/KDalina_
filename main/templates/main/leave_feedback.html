@@ -1,0 +1,19 @@
+{% extends 'main/basic_file.html' %}
+{% load static %}
+{%block title%}
+Оставить отзыв
+{%endblock%}
+{%block content%}
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm" style="color: white">
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm" style="color: red">
+        <h1 style="color: #DC143C">Оставить отзыв</h1>
+    </div>
+</div>
+<form method="post">
+    {% csrf_token %}
+    {{ form.title }}<br>
+    {{ form.review }}<br>
+    <button type="submit" class="btn btn-success">Выложить отзыв</button>
+    <span>{{ error }}</span>
+</form>
+{%endblock%}

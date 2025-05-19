@@ -1,0 +1,25 @@
+{% extends 'main/basic_file.html' %}
+{% load static %}
+{%block title%}
+Вакансии Кулинарного дома Алины ! 
+{%endblock%}
+{% block content %}
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm" style="color: white">
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm" style="color: red">
+        <h1 style="color: #DC143C">Заполните анкету на работу</h1>
+    </div>
+</div>
+<form method="post">
+    {% csrf_token %}
+    {{ form.name_surname }}<br>
+    {{ form.iphone }}<br>
+    {{ form.email }}<br>
+    {{ form.year_of_birth }}<br>
+    {{ form.job_title }}<br>
+    {{ form.experience }}<br>
+    {{ form.about_myself }}<br>
+    {{ form.revie }}<br>
+    <button type="submit" class="btn btn-success">Отправить анкету</button>
+    <span>{{ error }}</span>
+</form>
+{% endblock %}

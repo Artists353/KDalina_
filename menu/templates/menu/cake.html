@@ -1,0 +1,262 @@
+{% extends 'main/basic_file.html' %}
+{% load static %}
+{%block title%}
+Главная страница
+{%endblock%}
+{%block content%}
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .product-grid {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .product-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            padding: 15px;
+            width: calc(33% - 40px);
+            max-width: 300px;
+            background-color: white;
+            border: 1px solid #ddd;
+        }
+
+        .product-image {
+            position: relative;
+            width: 100%;
+            height: auto;
+            max-width: 200px;
+            border-radius: 5px;
+        }
+
+        .new-label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 5px 10px;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            border-radius: 5px;
+            z-index: 1;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            max-width: 200px;
+            border-radius: 5px;
+        }
+
+        .product-card h3 {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .product-card p {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .product-card .price {
+            font-weight: bold;
+            color: #ff0000;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="product-grid">
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/торт_апшерон.jpg'%}" alt="Product Image 1">
+            <div class="new-label">Новинки</div>
+            <h3>Торт 'Апшерон'</h3>
+            <p>Бисквит с  орехами, сливочный крем, кофе</p>
+            <span class="price">Цена: 990 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/торт_анечка.jpg'%}" alt="Product Image 2">
+            <div class="new-label">Новинки</div>
+            <h3>Торт 'Анечка'</h3>
+            <p>Медовые пышки, сметанный крем, чернослив, грецкий орех, шоколад, сливки</p>
+            <span class="price">Цена: 621 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/пьяная_вишня.jpg'%}" alt="Product Image 3">
+            <div class="new-label">Новинки</div>
+            <h3>Торт 'Пьяная вишня'</h3>
+            <p>Шоколадный бисквит, сливки, шоколад, какао</p>
+            <span class="price">Цена: 675 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/сама_нежность.jpg'%}" alt="Product Image 4">
+            <div class="new-label">Новинки</div>
+            <h3>Торт 'Сама нежность'</h3>
+            <p>Бисквит классический, яблоки, сахарная пудра.</p>
+            <span class="price">Цена: 350 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/торт_графские_развалины.jpg'%}" alt="Product Image 5">
+            <div class="new-label">Новинки</div>
+            <h3>Торт 'Графские развалины'</h3>
+            <p>Тесто песочное, курага, чернослив, крем с вареной сгущенкой, грецкие орехи, шоколад.</p>
+            <span class="price">Цена: 297 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/торт_гусиные_лапки.jpg'%}" alt="Product Image 6">
+            <div class="new-label">Новинки</div>
+            <h3>Торт 'Гусиные лапки'</h3>
+            <p>Песочное тесто, творог, меренга.</p>
+            <span class="price">Цена: 490 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/торт_банановый.jpg'%}" alt="Product Image 6">
+            <div class="new-label">Новинки</div>
+            <h3>Торт Банановый</h3>
+            <p>Бисквит классический, сливочно-заварной крем, банан, шоколадная глазурь</p>
+            <span class="price">Цена: 720 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/торт_баунти.jpg'%}" alt="Product Image 6">
+            <div class="new-label">Новинки</div>
+            <h3>Торт 'Баунти'</h3>
+            <p>Шоколадный бисквит, заварной крем с кокосом, сливочный крем с вареной сгущенкой, глазурь</p>
+            <span class="price">Цена: 810 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/торт_эскимо.jpg'%}" alt="Product Image 6">
+            <div class="new-label">Новинки</div>
+            <h3>Торт 'Эскимо'</h3>
+            <p>Бисквит классический, крем сливочный, крем мороженое, кусочки ананаса, глазурь шоколадная.</p>
+            <span class="price">Цена: 675 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/торт_фруктовый_рай.jpg'%}" alt="Product Image 6">
+            <div class="new-label">Новинки</div>
+            <h3>Торт 'Фруктовый рай'</h3>
+            <p>Бисквит классический, ананас, крем мороженое, сливки, апельсины, киви, виноград</p>
+            <span class="price">Цена: 720 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/торт_три_шоколада.jpg'%}" alt="Product Image 6">
+            <div class="new-label">Новинки</div>
+            <h3>Торт 'Три шоколада'</h3>
+            <p>Бисквит шоколадныя, сливки, шоколад белый, молочный, темный.</p>
+            <span class="price">Цена: 1125 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/торт_день_в_ночь.jpg'%}" alt="Product Image 6">
+            <div class="new-label">Новинки</div>
+            <h3>Торт 'Торт день в ночь'</h3>
+            <p>Бисквит шоколадныя, сливки, шоколад белый, молочный, темный.</p>
+            <span class="price">Цена: 1125 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/торт_испанский_медовик.jpg'%}" alt="Product Image 6">
+            <div class="new-label">Новинки</div>
+            <h3>Торт 'Испанский медовик'</h3>
+            <p>Медово-шоколадные пышки, заварной крем, глазурь шоколадная</p>
+            <span class="price">Цена: 990 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/торт_красный_бархат.jpg'%}" alt="Product Image 6">
+            <div class="new-label">Новинки</div>
+            <h3>Торт 'Красный бархат'</h3>
+            <p>Бисквит классический, крем-чиз, малиновый джем, мусс клубничный, кокосовая стружка</p>
+            <span class="price">Цена: 1080 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/торт_малина_и_клубника.jpg'%}" alt="Product Image 6">
+            <div class="new-label">Новинки</div>
+            <h3>Торт 'малина и клубника'</h3>
+            <p>Бисквит классический, крем-чиз, малиновый джем, мусс клубничный, кокосовая стружка</p>
+            <span class="price">Цена: 765 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/торт_микс.jpg'%}" alt="Product Image 6">
+            <div class="new-label">Новинки</div>
+            <h3>Торт 'Микс'</h3>
+            <p>Составлен из нескольких тортов (описание давать по внешнему виду порций)</p>
+            <span class="price">Цена: 720 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/торт_молочная_девочка.jpg'%}" alt="Product Image 6">
+            <div class="new-label">Новинки</div>
+            <h3>Торт 'Молочная девочка'</h3>
+            <p>Бисквит с белой сгущенкой, крем-чиз: маскарпоне со взбитыми сливками</p>
+            <span class="price">Цена: 720 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/торт_панчо_с_ананасом.jpg'%}" alt="Product Image 6">
+            <div class="new-label">Новинки</div>
+            <h3>Торт 'Панчо с ананасами'</h3>
+            <p>Шоколадный бисквит, грецкий орех, сметано-сливочный крем, ананас, тёмный шоколад</p>
+            <span class="price">Цена: 855 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/торт_прага.jpg'%}" alt="Product Image 6">
+            <div class="new-label">Новинки</div>
+            <h3>Торт 'Прага'</h3>
+            <p>Шоколадный бисквит, сливочный крем с вареной сгущенкой, шоколадная глазурь, абрикосовый джем.</p>
+            <span class="price">Цена: 810 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/торт_птичье_молоко.jpg'%}" alt="Product Image 6">
+            <div class="new-label">Новинки</div>
+            <h3>Торт 'Птичье молоко'</h3>
+            <p>Бисквит шоколадный, суфле белковое, шоколад</p>
+            <span class="price">Цена: 1212 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/торт_рафаэлло.jpg'%}" alt="Product Image 6">
+            <div class="new-label">Новинки</div>
+            <h3>Торт 'Рафаэлло'</h3>
+            <p>Бисквит классический с молочной пропиткой, кокос, крем с маскарпоне, сливки, арахис.</p>
+            <span class="price">Цена: 990 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/торт_сникерс.jpg'%}" alt="Product Image 6">
+            <div class="new-label">Новинки</div>
+            <h3>Торт 'Сникерс'</h3>
+            <p>Медовые пышки, сливочный крем с вареной сгущенкой, арахис, безе.</p>
+            <span class="price">Цена: 675 рублей</span>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="{%static 'main/img/торт_француженка.jpg'%}" alt="Product Image 6">
+            <div class="new-label">Новинки</div>
+            <h3>Торт 'Француженка'</h3>
+            <p>Бисквит белковый без муки, крем с белым шоколадом, курага, чернослив, фундук.</p>
+            <span class="price">Цена: 300 рублей</span>
+        </div>
+    </div>
+</body>
+</html>
+{%endblock%}
