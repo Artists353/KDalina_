@@ -11,13 +11,137 @@
         <b>Добро пожаловать в Кулинарный дом Алина</b>
     </h2>
 </div>
-
-<div class="slideshow-container">
-    <img class="mySlides" src="{% static 'main/img/letnee-menu-2.png' %}" style="width:100%">
-    <img class="mySlides" src="{% static 'main/img/letnee-menu.png' %}" style="width:100%">
-    <script src="{%static 'main/js/script.js' %}"></script>
-</div>
-
+<div class="video-rows">
+    <!-- 1 ряд -->
+    <div class="video-row">
+      <div class="video-item right">
+        <video autoplay loop muted playsinline preload="auto">
+          <source src="https://cdn.pixabay.com/video/2021/02/12/65128-507175874_large.mp4" type="video/mp4">
+        </video>
+        <div class="video-caption">Торт Шоколадный</div>
+      </div>
+      <div class="video-item center">
+        <video autoplay loop muted playsinline preload="auto">
+          <source src="https://cdn.pixabay.com/video/2021/09/07/88793-593560992_large.mp4" type="video/mp4">
+        </video>
+        <div class="video-caption">Торт Медовик</div>
+      </div>
+      <div class="video-item left">
+        <video autoplay loop muted playsinline preload="auto">
+          <source src="https://cdn.pixabay.com/video/2020/03/19/33472-399157628_large.mp4" type="video/mp4">
+        </video>
+        <div class="video-caption">Торт Фруктовый</div>
+      </div>
+    </div>
+  
+    <!-- 2 ряд -->
+    <div class="video-row">
+      <div class="video-item right">
+        <video autoplay loop muted playsinline preload="auto">
+          <source src="https://cdn.pixabay.com/video/2017/08/09/11569-227664571_large.mp4" type="video/mp4">
+        </video>
+        <div class="video-caption">Торт Красный Бархат</div>
+      </div>
+      <div class="video-item center">
+        <video autoplay loop muted playsinline preload="auto">
+          <source src="https://cdn.pixabay.com/video/2016/05/31/3645-169016352_large.mp4" type="video/mp4">
+        </video>
+        <div class="video-caption">Торт Наполеон</div>
+      </div>
+      <div class="video-item left">
+        <video autoplay loop muted playsinline preload="auto">
+          <source src="https://cdn.pixabay.com/video/2019/05/09/23214-334829532_large.mp4" type="video/mp4">
+        </video>
+        <div class="video-caption">Торт Муссовый</div>
+      </div>
+    </div>
+  </div>
+  
+  <style>
+  .video-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    margin: 50px 0;
+  }
+  
+  .video-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 1800px;
+  }
+  
+  .video-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .video-item video {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0,0,0,.3);
+    background: #000;
+  }
+  
+  /* Подпись под видео */
+  .video-caption {
+    margin-top: 15px;
+    background-color: #DC143C; /* красный фон */
+    color: #fff;               /* белый текст */
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-align: center;
+  }
+  
+  /* Порядок расположения */
+  .right { order: 3; }
+  .center { order: 2; }
+  .left { order: 1; }
+  
+  /* Адаптив */
+  @media (max-width: 1400px) {
+    .video-item video { width: 400px; height: 400px; }
+  }
+  @media (max-width: 1100px) {
+    .video-row { flex-wrap: wrap; justify-content: center; }
+    .video-item video { width: 360px; height: 360px; }
+    .right, .center, .left { order: unset; }
+  }
+  @media (max-width: 750px) {
+    .video-item video { width: 320px; height: 320px; }
+  }
+  </style>
+  
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const vids = document.querySelectorAll('.video-item video');
+    vids.forEach(v => {
+      v.muted = true;
+      v.setAttribute('muted','');
+      v.autoplay = true;
+      v.setAttribute('autoplay','');
+      v.playsInline = true;
+      v.setAttribute('playsinline','');
+      v.setAttribute('preload','auto');
+      const tryPlay = () => v.play().catch(()=>{});
+      if (v.readyState >= 2) {
+        tryPlay();
+      } else {
+        v.addEventListener('canplay', tryPlay, { once: true });
+        v.load();
+      }
+    });
+  });
+  </script>
+  
 <div class="p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
     <h2 class="center" style="color: #DC143C">
         <b>Каталог</b>
