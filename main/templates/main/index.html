@@ -6,142 +6,197 @@
 {%block content%}
 
 <link rel="stylesheet" href="{%static 'main/css/main.css' %}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <div class="p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
     <h2 class="center" style="color: #DC143C">
         <b>Добро пожаловать в Кулинарный дом Алина</b>
     </h2>
 </div>
-<div class="video-rows">
-    <!-- 1 ряд -->
-    <div class="video-row">
-      <div class="video-item right">
-        <video autoplay loop muted playsinline preload="auto">
-          <source src="https://cdn.pixabay.com/video/2021/02/12/65128-507175874_large.mp4" type="video/mp4">
-        </video>
-        <div class="video-caption">Торт Шоколадный</div>
-      </div>
-      <div class="video-item center">
-        <video autoplay loop muted playsinline preload="auto">
-          <source src="https://cdn.pixabay.com/video/2021/09/07/88793-593560992_large.mp4" type="video/mp4">
-        </video>
-        <div class="video-caption">Торт Медовик</div>
-      </div>
-      <div class="video-item left">
-        <video autoplay loop muted playsinline preload="auto">
-          <source src="https://cdn.pixabay.com/video/2020/03/19/33472-399157628_large.mp4" type="video/mp4">
-        </video>
-        <div class="video-caption">Торт Фруктовый</div>
-      </div>
-    </div>
-  
-    <!-- 2 ряд -->
-    <div class="video-row">
-      <div class="video-item right">
-        <video autoplay loop muted playsinline preload="auto">
-          <source src="https://cdn.pixabay.com/video/2017/08/09/11569-227664571_large.mp4" type="video/mp4">
-        </video>
-        <div class="video-caption">Торт Красный Бархат</div>
-      </div>
-      <div class="video-item center">
-        <video autoplay loop muted playsinline preload="auto">
-          <source src="https://cdn.pixabay.com/video/2016/05/31/3645-169016352_large.mp4" type="video/mp4">
-        </video>
-        <div class="video-caption">Торт Наполеон</div>
-      </div>
-      <div class="video-item left">
-        <video autoplay loop muted playsinline preload="auto">
-          <source src="https://cdn.pixabay.com/video/2019/05/09/23214-334829532_large.mp4" type="video/mp4">
-        </video>
-        <div class="video-caption">Торт Муссовый</div>
-      </div>
-    </div>
+
+<div class="cake-grid">
+  <div class="cake-card">
+    <img src="https://cdn-sh1.vigbo.com/shops/13467/products/21970331/images/3-d041df8ec2d6c48a374dee20505c31f8.JPG" alt="Торт Шоколадный">
+    <span class="cake-title">Торт Шоколадный</span>
   </div>
-  
-  <style>
-  .video-rows {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    align-items: center;
-    margin: 50px 0;
-  }
-  
-  .video-row {
+  <div class="cake-card">
+    <img src="https://i.pinimg.com/originals/c4/7f/15/c47f1521e002c557d7d48415ffd5d349.jpg" alt="Торт Медовик">
+    <span class="cake-title">Торт Медовик</span>
+  </div>
+  <div class="cake-card">
+    <img src="https://teabakery.ru/wp-content/uploads/2023/08/PXL_20230721_102021033.PORTRAIT-02-scaled.jpeg" alt="Торт Фруктовый">
+    <span class="cake-title">Торт Фруктовый</span>
+  </div>
+  <div class="cake-card">
+    <img src="https://tart-tort.ru/uploads/product/1600/1656/1657_tort_na_zakaz_1_2022-07-11_15-18-51.jpg" alt="Красный Бархат">
+    <span class="cake-title">Красный Бархат</span>
+  </div>
+</div>
+<style>
+  .cake-grid {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin: 40px auto;
+  }
+  
+  .cake-card {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .cake-card img {
     width: 100%;
-    max-width: 1800px;
-  }
-  
-  .video-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .video-item video {
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
+    height: 100%;
     object-fit: cover;
-    box-shadow: 0 8px 20px rgba(0,0,0,.3);
-    background: #000;
   }
   
-  /* Подпись под видео */
-  .video-caption {
-    margin-top: 15px;
-    background-color: #DC143C; /* красный фон */
-    color: #fff;               /* белый текст */
-    font-size: 1.5rem;
+  .cake-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(220,20,60,0.6);
+  }
+  
+  .cake-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(220,20,60,0.9);
+    color: #fff;
+    font-size: 0.9rem;
     font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 30px;
+    padding: 5px;
     text-align: center;
-  }
-  
-  /* Порядок расположения */
-  .right { order: 3; }
-  .center { order: 2; }
-  .left { order: 1; }
-  
-  /* Адаптив */
-  @media (max-width: 1400px) {
-    .video-item video { width: 400px; height: 400px; }
-  }
-  @media (max-width: 1100px) {
-    .video-row { flex-wrap: wrap; justify-content: center; }
-    .video-item video { width: 360px; height: 360px; }
-    .right, .center, .left { order: unset; }
-  }
-  @media (max-width: 750px) {
-    .video-item video { width: 320px; height: 320px; }
   }
   </style>
   
-  <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const vids = document.querySelectorAll('.video-item video');
-    vids.forEach(v => {
-      v.muted = true;
-      v.setAttribute('muted','');
-      v.autoplay = true;
-      v.setAttribute('autoplay','');
-      v.playsInline = true;
-      v.setAttribute('playsinline','');
-      v.setAttribute('preload','auto');
-      const tryPlay = () => v.play().catch(()=>{});
-      if (v.readyState >= 2) {
-        tryPlay();
-      } else {
-        v.addEventListener('canplay', tryPlay, { once: true });
-        v.load();
-      }
-    });
+<!-- Слайдер с видео -->
+<div class="swiper video-slider">
+  <div class="swiper-wrapper">
+
+    <div class="swiper-slide">
+      <video autoplay loop muted playsinline preload="auto">
+        <source src="https://video-previews.elements.envatousercontent.com/files/bd985ce5-bd9d-4219-8809-1bbcc6721e5d/video_preview_h264.mp4" type="video/mp4">
+      </video>
+      <div class="video-caption">Торт Шоколадный</div>
+    </div>
+
+    <div class="swiper-slide">
+      <video autoplay loop muted playsinline preload="auto">
+        <source src="https://video-previews.elements.envatousercontent.com/files/add39569-c666-4e55-a23b-18051ece69aa/video_preview_h264.mp4" type="video/mp4">
+      </video>
+      <div class="video-caption">Торт Медовик</div>
+    </div>
+
+    <div class="swiper-slide">
+      <video autoplay loop muted playsinline preload="auto">
+        <source src="https://video-previews.elements.envatousercontent.com/c11488a1-125a-4198-8880-533369e81527/watermarked_preview/watermarked_preview.mp4" type="video/mp4">
+      </video>
+      <div class="video-caption">Торт Фруктовый</div>
+    </div>
+
+    <div class="swiper-slide">
+      <video autoplay loop muted playsinline preload="auto">
+        <source src="https://video-previews.elements.envatousercontent.com/files/d27990bc-2354-4a71-ad0c-c31ef0fcb79f/video_preview_h264.mp4" type="video/mp4">
+      </video>
+      <div class="video-caption">Торт Красный Бархат</div>
+    </div>
+
+    <div class="swiper-slide">
+      <video autoplay loop muted playsinline preload="auto">
+        <source src="https://video-previews.elements.envatousercontent.com/files/914ae832-defa-449e-b9ae-4187dfdcc85b/video_preview_h264.mp4" type="video/mp4">
+      </video>
+      <div class="video-caption">Торт Наполеон</div>
+    </div>
+
+    <div class="swiper-slide">
+      <video autoplay loop muted playsinline preload="auto">
+        <source src="https://video-previews.elements.envatousercontent.com/files/b83c9757-023a-4f22-bafd-219f530449fa/video_preview_h264.mp4" type="video/mp4">
+      </video>
+      <div class="video-caption">Торт Муссовый</div>
+    </div>
+
+  </div>  
+</div>
+
+<style>
+.video-slider {
+  width: 100%;
+  padding: 60px 0;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.swiper-slide video {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.swiper-slide:hover video {
+  transform: scale(1.2);
+  box-shadow: 0 12px 30px rgba(220, 20, 60, 0.7);
+}
+
+.video-caption {
+  margin-top: 15px;
+  background-color: #DC143C;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 8px 20px;
+  border-radius: 25px;
+  text-align: center;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // Запуск слайдера
+  new Swiper('.video-slider', {
+    slidesPerView: 3,
+    spaceBetween: 50,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    autoplay: {
+      delay: 1000,
+      disableOnInteraction: false
+    }
   });
-  </script>
-  
+
+  // Гарантируем автозапуск видео
+  const vids = document.querySelectorAll('.swiper-slide video');
+  vids.forEach(v => {
+    v.muted = true;
+    v.playsInline = true;
+    v.autoplay = true;
+    v.load();
+    v.play().catch(()=>{});
+  });
+});
+</script>
 <div class="p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
     <h2 class="center" style="color: #DC143C">
         <b>Каталог</b>
