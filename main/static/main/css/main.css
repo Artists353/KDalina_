@@ -1,12 +1,7 @@
 
+
 body {
-    background: #DC143C;
-}
-body {
-    background-color: #DC143C; /* Красный фон */
-    background-image: radial-gradient(circle, white 30%, transparent 30%);
-    background-size: 50px 50px; /* Размер точек и их расположение */
-    background-repeat: repeat; /* Повтор фона по всему элементу */
+    background-color: #FFA07A; 
   }
   
 
