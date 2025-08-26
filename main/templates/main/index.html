@@ -82,87 +82,136 @@
   <div class="swiper-wrapper">
 
     <div class="swiper-slide">
-      <video autoplay loop muted playsinline preload="auto">
-        <source src="https://video-previews.elements.envatousercontent.com/files/bd985ce5-bd9d-4219-8809-1bbcc6721e5d/video_preview_h264.mp4" type="video/mp4">
-      </video>
-      <div class="video-caption">Торт Шоколадный</div>
+      <a href="{% url 'cake' %}" class="circle-card" aria-label="Перейти в раздел Торты">
+        <div class="ribbon">Торты</div>
+        <div class="circle-media">
+          <video autoplay loop muted playsinline preload="auto">
+            <source src="https://video-previews.elements.envatousercontent.com/files/bd985ce5-bd9d-4219-8809-1bbcc6721e5d/video_preview_h264.mp4" type="video/mp4">
+          </video>
+        </div>
+      </a>
+      <a href="{% url 'cake' %}" class="video-caption">Торт Шоколадный</a>
     </div>
 
     <div class="swiper-slide">
-      <video autoplay loop muted playsinline preload="auto">
-        <source src="https://video-previews.elements.envatousercontent.com/files/add39569-c666-4e55-a23b-18051ece69aa/video_preview_h264.mp4" type="video/mp4">
-      </video>
-      <div class="video-caption">Торт Медовик</div>
+      <a href="{% url 'brownie' %}" class="circle-card" aria-label="Перейти в раздел Торты">
+        <div class="ribbon">Пирожные</div>
+        <div class="circle-media">
+          <video autoplay loop muted playsinline preload="auto">
+            <source src="https://video-previews.elements.envatousercontent.com/files/add39569-c666-4e55-a23b-18051ece69aa/video_preview_h264.mp4" type="video/mp4">
+          </video>
+        </div>
+      </a>
+      <a href="{% url 'brownie' %}" class="video-caption">Торт Медовик</a>
     </div>
 
     <div class="swiper-slide">
-      <video autoplay loop muted playsinline preload="auto">
-        <source src="https://video-previews.elements.envatousercontent.com/c11488a1-125a-4198-8880-533369e81527/watermarked_preview/watermarked_preview.mp4" type="video/mp4">
-      </video>
-      <div class="video-caption">Торт Фруктовый</div>
+      <a href="{% url 'cookie' %}" class="circle-card" aria-label="Перейти в раздел Торты">
+        <div class="ribbon">Печенье</div>
+        <div class="circle-media">
+          <video autoplay loop muted playsinline preload="auto">
+            <source src="https://video-previews.elements.envatousercontent.com/c11488a1-125a-4198-8880-533369e81527/watermarked_preview/watermarked_preview.mp4" type="video/mp4">
+          </video>
+        </div>
+      </a>
+      <a href="{% url 'cookie' %}" class="video-caption">Торт Фруктовый</a>
     </div>
 
     <div class="swiper-slide">
-      <video autoplay loop muted playsinline preload="auto">
-        <source src="https://video-previews.elements.envatousercontent.com/files/d27990bc-2354-4a71-ad0c-c31ef0fcb79f/video_preview_h264.mp4" type="video/mp4">
-      </video>
-      <div class="video-caption">Торт Красный Бархат</div>
+      <a href="{% url 'pie' %}" class="circle-card" aria-label="Перейти в раздел Торты">
+        <div class="ribbon">Пироги</div>
+        <div class="circle-media">
+          <video autoplay loop muted playsinline preload="auto">
+            <source src="https://video-previews.elements.envatousercontent.com/files/d27990bc-2354-4a71-ad0c-c31ef0fcb79f/video_preview_h264.mp4" type="video/mp4">
+          </video>
+        </div>
+      </a>
+      <a href="{% url 'pie' %}" class="video-caption">Красный Бархат</a>
     </div>
 
     <div class="swiper-slide">
-      <video autoplay loop muted playsinline preload="auto">
-        <source src="https://video-previews.elements.envatousercontent.com/files/914ae832-defa-449e-b9ae-4187dfdcc85b/video_preview_h264.mp4" type="video/mp4">
-      </video>
-      <div class="video-caption">Торт Наполеон</div>
+      <a href="{% url 'roll' %}" class="circle-card" aria-label="Перейти в раздел Торты">
+        <div class="ribbon">Рулет</div>
+        <div class="circle-media">
+          <video autoplay loop muted playsinline preload="auto">
+            <source src="https://video-previews.elements.envatousercontent.com/files/914ae832-defa-449e-b9ae-4187dfdcc85b/video_preview_h264.mp4" type="video/mp4">
+          </video>
+        </div>
+      </a>
+      <a href="{% url 'roll' %}" class="video-caption">Торт Наполеон</a>
     </div>
 
     <div class="swiper-slide">
-      <video autoplay loop muted playsinline preload="auto">
-        <source src="https://video-previews.elements.envatousercontent.com/files/b83c9757-023a-4f22-bafd-219f530449fa/video_preview_h264.mp4" type="video/mp4">
-      </video>
-      <div class="video-caption">Торт Муссовый</div>
+      <a href="{% url 'other' %}" class="circle-card" aria-label="Перейти в раздел Торты">
+        <div class="ribbon">Другое</div>
+        <div class="circle-media">
+          <video autoplay loop muted playsinline preload="auto">
+            <source src="https://video-previews.elements.envatousercontent.com/files/b83c9757-023a-4f22-bafd-219f530449fa/video_preview_h264.mp4" type="video/mp4">
+          </video>
+        </div>
+      </a>
+      <a href="{% url 'other' %}" class="video-caption">Торт Муссовый</a>
     </div>
 
-  </div>  
+  </div>
 </div>
 
 <style>
-.video-slider {
-  width: 100%;
-  padding: 60px 0;
-}
-
-.swiper-slide {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.swiper-slide video {
-  width: 350px;
-  height: 350px;
+/* Карточка-кружок с красным фоном в горошек */
+.circle-card{
+  position: relative;
+  width: 360px; height: 360px;
   border-radius: 50%;
-  object-fit: cover;
+  padding: 14px;                      /* ширина «ободка» с горошком */
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  background: #DC143C;
   box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.circle-card:hover{ transform: scale(1.06); box-shadow: 0 12px 30px rgba(220,20,60,.6); }
+
+/* Внутренний круг с видео/картинкой */
+.circle-media{
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fff;
+}
+.circle-media video, .circle-media img{
+  width: 100%; height: 100%; object-fit: cover;
 }
 
-.swiper-slide:hover video {
-  transform: scale(1.2);
-  box-shadow: 0 12px 30px rgba(220, 20, 60, 0.7);
+/* Ленточка сверху */
+.circle-card .ribbon{
+  position: absolute;
+  top: 15px;   /* теперь ленточка опустится вниз */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  color: #DC143C;
+  padding: 6px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,.2);
+  pointer-events: none;
 }
 
-.video-caption {
-  margin-top: 15px;
-  background-color: #DC143C;
-  color: #fff;
-  font-size: 1.3rem;
-  font-weight: bold;
-  padding: 8px 20px;
-  border-radius: 25px;
-  text-align: center;
+
+/* Подпись под кружком — тоже ссылка */
+.video-caption{
+  margin-top: 12px;
+  display: inline-block;
+  background-color: #DC143C; color: #fff;
+  font-size: 1.15rem; font-weight: 700;
+  padding: 8px 18px; border-radius: 25px;
+  text-decoration: none;
 }
+
+/* Перекрываем старые эффекты на видео */
+.swiper-slide video{ border-radius: 0; box-shadow: none; }
+.swiper-slide{ display: flex; flex-direction: column; align-items: center; }
 </style>
 
 <script>
@@ -181,7 +230,7 @@ document.addEventListener('DOMContentLoaded', function () {
       clickable: true
     },
     autoplay: {
-      delay: 1000,
+      delay: 3000,
       disableOnInteraction: false
     }
   });
